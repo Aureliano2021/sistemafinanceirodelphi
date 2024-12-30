@@ -32,6 +32,7 @@ type
     procedure btnAlterarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +64,11 @@ end;
 procedure TfrmCadastro.btnIncluirClick(Sender: TObject);
 begin
   pnlPrincipal.ActiveCard := CardCadastro;
+end;
+
+procedure TfrmCadastro.FormShow(Sender: TObject);
+begin
+  pnlPrincipal.ActiveCard := CardPesquisa;
 end;
 
 end.
