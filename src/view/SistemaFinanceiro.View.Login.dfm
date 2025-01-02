@@ -1036,7 +1036,9 @@ object frmLogin: TfrmLogin
         BevelOuter = bvNone
         Padding.Left = 50
         Padding.Right = 50
-        TabOrder = 0
+        TabOrder = 1
+        ExplicitLeft = 6
+        ExplicitTop = 40
         object Label1: TLabel
           Left = 50
           Top = 0
@@ -1054,6 +1056,7 @@ object frmLogin: TfrmLogin
           Align = alTop
           PasswordChar = '*'
           TabOrder = 0
+          ExplicitTop = 22
         end
       end
       object Panel3: TPanel
@@ -1065,7 +1068,9 @@ object frmLogin: TfrmLogin
         BevelOuter = bvNone
         Padding.Left = 50
         Padding.Right = 50
-        TabOrder = 1
+        TabOrder = 0
+        ExplicitLeft = 6
+        ExplicitTop = -6
         object Label3: TLabel
           Left = 50
           Top = 0
@@ -1097,6 +1102,7 @@ object frmLogin: TfrmLogin
         Padding.Right = 50
         Padding.Bottom = 20
         TabOrder = 2
+        ExplicitTop = 111
         object btnEntrar: TButton
           Left = 50
           Top = 20
@@ -1106,6 +1112,7 @@ object frmLogin: TfrmLogin
           Caption = 'Entrar'
           TabOrder = 0
           OnClick = btnEntrarClick
+          ExplicitWidth = 262
         end
       end
     end

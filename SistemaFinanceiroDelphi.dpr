@@ -9,7 +9,8 @@ uses
   SistemaFinanceiro.View.Usuarios in 'src\view\SistemaFinanceiro.View.Usuarios.pas' {frmUsuarios},
   SistemaFinanceiro.Model.Usuarios in 'src\model\SistemaFinanceiro.Model.Usuarios.pas' {dmUsuarios: TDataModule},
   SistemaFinanceiro.Utiliarios in 'src\util\SistemaFinanceiro.Utiliarios.pas',
-  SistemaFinanceiro.View.Login in 'src\view\SistemaFinanceiro.View.Login.pas' {frmLogin};
+  SistemaFinanceiro.View.Login in 'src\view\SistemaFinanceiro.View.Login.pas' {frmLogin},
+  SistemaFinanceiro.Model.Sistema in 'src\model\SistemaFinanceiro.Model.Sistema.pas' {dmSistema: TDataModule};
 
 {$R *.res}
 
@@ -17,9 +18,10 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TdmUsuarios, dmUsuarios);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmCadastro, frmCadastro);
   Application.CreateForm(TfrmUsuarios, frmUsuarios);
-  Application.CreateForm(TdmUsuarios, dmUsuarios);
+  Application.CreateForm(TdmSistema, dmSistema);
   Application.Run;
 end.

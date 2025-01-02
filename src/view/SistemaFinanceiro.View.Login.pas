@@ -36,6 +36,9 @@ var
 
 implementation
 
+uses
+  SistemaFinanceiro.Model.Sistema;
+
 {$R *.dfm}
 
 
@@ -56,13 +59,12 @@ begin
     abort;
   end;
 
-  if not Assigned(dmUsuarios) then
-  dmUsuarios := TdmUsuarios.Create(nil);
-
 
 
   try
   dmUsuarios.EfetuarLogin(Trim(edtLogin.Text), Trim(edtSenha.Text));
+  dmSistema.DataUltimoAcesso(Now);
+  dmSistema.UsuarioUltimoAcesso(dmUsuarios.LoginUsuarioLogado);
   ModalResult := mrOK;
   except
     on Erro:Exception do
@@ -72,12 +74,11 @@ begin
     end;
   end;
 
-  dmUsuarios.Free;
 end;
 
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-  edtLogin.SetFocus;
+  edtLogin.Text := dmSistema.UsuarioUltimoAcesso;
 end;
 
 end.
