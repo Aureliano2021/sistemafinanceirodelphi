@@ -19,10 +19,6 @@ object frmPrincipal: TfrmPrincipal
     Left = 8
     object mnuCadastros: TMenuItem
       Caption = 'Cadastros'
-      object mnuCadastro: TMenuItem
-        Caption = 'Cadastro'
-        OnClick = mnuCadastroClick
-      end
       object mnuUsuarios: TMenuItem
         Caption = 'Usu'#225'rios'
         OnClick = mnuUsuariosClick

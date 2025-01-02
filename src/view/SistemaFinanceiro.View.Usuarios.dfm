@@ -3,15 +3,10 @@ inherited frmUsuarios: TfrmUsuarios
   StyleElements = [seFont, seClient, seBorder]
   TextHeight = 15
   inherited pnlPrincipal: TCardPanel
+    ActiveCard = CardPesquisa
     StyleElements = [seFont, seClient, seBorder]
-    ExplicitWidth = 624
-    ExplicitHeight = 441
     inherited CardCadastro: TCard
       StyleElements = [seFont, seClient, seBorder]
-      ExplicitLeft = 2
-      ExplicitTop = 1
-      ExplicitWidth = 622
-      ExplicitHeight = 439
       object lblNome: TLabel [0]
         Left = 16
         Top = 27
@@ -42,9 +37,8 @@ inherited frmUsuarios: TfrmUsuarios
       end
       inherited Panel1: TPanel
         StyleElements = [seFont, seClient, seBorder]
-        ExplicitTop = 360
-        inherited Button5: TButton
-          ExplicitLeft = 472
+        inherited btnSalvar: TButton
+          OnClick = btnSalvarClick
         end
       end
       object edtNome: TEdit
@@ -80,10 +74,6 @@ inherited frmUsuarios: TfrmUsuarios
     end
     inherited CardPesquisa: TCard
       StyleElements = [seFont, seClient, seBorder]
-      ExplicitLeft = 1
-      ExplicitTop = 1
-      ExplicitWidth = 622
-      ExplicitHeight = 439
       inherited pnlPesquisa: TPanel
         StyleElements = [seFont, seClient, seBorder]
         inherited Label1: TLabel
@@ -94,36 +84,18 @@ inherited frmUsuarios: TfrmUsuarios
         end
         inherited btnPesquisar: TButton
           OnClick = btnPesquisarClick
-          ExplicitTop = 0
         end
       end
       inherited pnlBotoes: TPanel
         StyleElements = [seFont, seClient, seBorder]
-        ExplicitTop = 360
-        inherited btnFechar: TButton
-          ExplicitTop = 0
-          ExplicitHeight = 79
-        end
-        inherited btnImprimir: TButton
-          ExplicitLeft = 225
-        end
         inherited btnExcluir: TButton
-          ExplicitLeft = 150
-          ExplicitTop = 0
-        end
-        inherited btnAlterar: TButton
-          ExplicitLeft = 75
-        end
-        inherited btnIncluir: TButton
-          ExplicitLeft = 0
+          OnClick = btnExcluirClick
+          ExplicitLeft = 144
+          ExplicitTop = 6
         end
       end
       inherited pnlPesquisaGrid: TPanel
         StyleElements = [seFont, seClient, seBorder]
-        ExplicitLeft = 0
-        ExplicitTop = 65
-        ExplicitWidth = 622
-        ExplicitHeight = 295
         inherited DBGrid1: TDBGrid
           DataSource = DataSource1
           Columns = <
@@ -144,6 +116,7 @@ inherited frmUsuarios: TfrmUsuarios
               Expanded = False
               FieldName = 'status'
               Title.Caption = 'Status'
+              Width = 64
               Visible = True
             end>
         end

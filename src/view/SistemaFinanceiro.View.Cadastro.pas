@@ -27,7 +27,7 @@ type
     btnIncluir: TButton;
     Panel1: TPanel;
     btnCancelar: TButton;
-    Button5: TButton;
+    btnSalvar: TButton;
     procedure btnIncluirClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);

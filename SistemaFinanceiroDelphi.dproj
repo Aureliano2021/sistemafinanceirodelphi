@@ -153,6 +153,11 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="src\util\SistemaFinanceiro.Utiliarios.pas"/>
+        <DCCReference Include="src\view\SistemaFinanceiro.View.Login.pas">
+            <Form>frmLogin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

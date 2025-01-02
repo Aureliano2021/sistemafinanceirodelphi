@@ -21,7 +21,7 @@ object frmCadastro: TfrmCadastro
     Width = 624
     Height = 441
     Align = alClient
-    ActiveCard = CardPesquisa
+    ActiveCard = CardCadastro
     Caption = 'pnlPrincipal'
     TabOrder = 0
     object CardCadastro: TCard
@@ -32,10 +32,6 @@ object frmCadastro: TfrmCadastro
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object Panel1: TPanel
         Left = 0
         Top = 360
@@ -44,7 +40,6 @@ object frmCadastro: TfrmCadastro
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitTop = 366
         object btnCancelar: TButton
           Left = 547
           Top = 0
@@ -59,7 +54,7 @@ object frmCadastro: TfrmCadastro
           TabOrder = 0
           OnClick = btnCancelarClick
         end
-        object Button5: TButton
+        object btnSalvar: TButton
           Left = 472
           Top = 0
           Width = 75
@@ -71,7 +66,6 @@ object frmCadastro: TfrmCadastro
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          ExplicitLeft = 0
         end
       end
     end
